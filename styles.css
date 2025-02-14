@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Search Bar */
+.search-container {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.search-icon {
+    color: #00aaff;
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Title */
+.JEE-Visuals {
+    position: absolute;
+    top: 50px;
+    left: 35px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #00aaff;
+    text-transform: uppercase;
+    font-family: 'Minecraft', sans-serif;
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* General Button Style */
+.button {
+    width: 250px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 15px;
+    border: 2px solid #00aaff;
+    background: #222;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.button:hover {
+    background: #00aaff;
+    color: #121212;
+    transform: scale(1.1);
+}
+
+.button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Category Buttons */
+.category-button {
+    margin: 10px;
+}
+.physics-button, 
+.chemistry-button, 
+.maths-button {
+    display: inline-block;
+    width: 300px; /* Adjust width */
+    height: 180px; /* Adjust height */
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    line-height: 140px; /* Centers text vertically */
+    text-decoration: none;
+    border-radius: 15px;
+    border: none;
+    background-size: cover; /* Ensures the full image is displayed */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.physics-button {
+    background-image: url('images/physics.jpg'); /* Ensure the path is correct */
+}
+
+.chemistry-button {
+    background-image: url('images/chemistry.jpg');
+}
+
+.maths-button {
+    background-image: url('images/mathematics.jpg');
+}
+
+.physics-button {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+}
+
+.chemistry-button {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+}
+
+.maths-button {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+}
+
+/* Back Button */
+.back-button {
+    width: 150px;
+    height: 50px;
+    background-color: #ffb6c1;
+    color: black;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Chatbot Button */
+#chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background: url('images/chatbot.jpg') no-repeat center center;
+    background-size: cover;
+    border: 2px solid #00aaff;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 170, 255, 0.5);
+}
+
+#chatbot-btn:hover {
+    background-color: #00aaff;
+    color: #111;
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.8);
+    transform: scale(1.1);
+}
+
+/* Hover Effect for Chatbot */
+#chatbot-btn span {
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+    width: 80px;
+    border-radius: 15px;
+    height: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+#chatbot-btn:hover span::after {
+    content: "AI";
+}
+
+/* Hover Container */
+.hover-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.default img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hovered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00aaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-container:hover .default {
+    opacity: 0;
+}
+
+.hover-container:hover .hovered {
+    opacity: 1;
+}
+.physics-button, 
+.chemistry-button, 
+.maths-button {
+    display: inline-block;
+    width: 320px; /* Adjust as needed */
+    height: 190px; /* Adjust as needed */
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    line-height: 180px; 
+    text-decoration: none;
+    border-radius: 15px;
+    border: none;
+    background-size: 100% 100%; /* Forces full image to fit */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+.physics-button {
+    background-image: url('images/physics.jpg');
+}
+
+.chemistry-button {
+    background-image: url('images/chemistry.jpg');
+}
+
+.maths-button {
+    background-image: url('images/mathematics.jpg');
+}
+.hover-container {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensures it stays on top */
+}
